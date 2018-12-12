@@ -18,14 +18,16 @@ p {
 
 .header {
   font-size: 1.7rem;
-  padding: 3rem 4rem;
+  padding: 2rem 4rem 2rem 4rem;
   font-weight: 300;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
   display: block;
   padding-bottom: 5px;
-  border-bottom: 0.1rem solid #FF593C;
+  border-bottom: 0.1rem solid #EF8354;
   float: left;
 }
 
@@ -141,7 +143,7 @@ button {
   font-size: 1.2rem;
   font-weight: 300;
   cursor: pointer;
-  background-color: #2E4369;
+  background-color: #2D3142;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
@@ -153,6 +155,11 @@ button {
 .tab-header.selected {
   background-color: #37517E;
   border-bottom: none;
+}
+
+.tab-header.selected > span {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #EF8354;
 }
 
 .tab-content-wrapper {
@@ -189,6 +196,164 @@ button {
     font-size: 14px;
   }
 
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .content-wrapper {
+    padding: 10rem 0 0 0 !important;
+  }
+
+  /* Hamburger styling */
+
+  .hamburger-wrapper {
+    z-index: 10000;
+    width: 5%;
+    vertical-align: middle;
+    float: left;
+  }
+  
+  .nav-icon {
+    width: 32px;
+    height: 16px;
+    position: relative;
+    margin: 0 auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .nav-icon span {
+    display: block;
+    position: absolute;
+    height: 0.3rem;
+    width: 50%;
+    background: #BFC0C0;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  
+  .nav-icon span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 9px 9px 0;
+  }
+  
+  .nav-icon span:nth-child(odd) {
+    left:0px;
+    border-radius: 9px 0 0 9px;
+  }
+  
+  .nav-icon span:nth-child(1), .nav-icon span:nth-child(2) {
+    top: 0px;
+  }
+  
+  .nav-icon span:nth-child(3), .nav-icon span:nth-child(4) {
+    top: 8px;
+  }
+  
+  .nav-icon span:nth-child(5), .nav-icon span:nth-child(6) {
+    top: 16px;
+  }
+  
+  .nav-icon.open span:nth-child(1),.nav-icon.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .nav-icon.open span:nth-child(2),.nav-icon.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .nav-icon.open span:nth-child(1) {
+    left: 5px;
+    top: 6px;
+  }
+  
+  .nav-icon.open span:nth-child(2) {
+    left: calc(50% - 4px);
+    top: 6px;
+  }
+  
+  .nav-icon.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+  
+  .nav-icon.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+  
+  .nav-icon.open span:nth-child(5) {
+    left: 6px;
+    top: 12px;
+  }
+  
+  .nav-icon.open span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 12px;
+  }
+
+  /* End hamburger styling */
+
+  /* Side nav styling */
+
+  .side-nav-links-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2D3142;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 10rem 4rem;
+  }
+
+  .hamburger-link {
+    color: white;
+    text-decoration: none;
+    font-size: 2.25rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+  }
+
+  .hamburger-link:hover {
+    cursor: pointer;
+    color: grey;
+  }
+  
+  .hamburger-link.active {
+    font-style: italic;
+    color: #EF8354;
+  }
+  
+  /* End Side Nav Styling for Mobile */
+
   .content-wrapper {
     display: block;
     padding: 1.5rem 0 0 0;
@@ -218,7 +383,7 @@ button {
     display: block;
     font-size: 1.5rem;
     font-weight: 300;
-    background-color: #2E4369;
+    background-color: #2D3142;
     padding: 2rem 0.5rem;
     width: 100%;
     text-align: center;
@@ -227,25 +392,26 @@ button {
 
   .info-header-sm-wrapper > span {
     padding-bottom: 5px;
-    border-bottom: 1px solid #FF593C;
+    border-bottom: 1px solid #EF8354;
   }
 
 
   .information-wrapper-sm > div {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 
 
   .content-sm-wrapper {
-    background-color: #2E4369;
-    min-height: 20rem;
+    min-height: 35rem;
     font-size: 1.2rem;
     font-weight: 300;
+    box-shadow: 2px 2px 60px 0 #000000;
   }
 
   .signup-form {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 5rem;
   }
 
   .signup-form .text-label {
@@ -272,9 +438,20 @@ button {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .hamburger-wrapper {
+    margin-right: 12px;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   html {
     font-size: 10px;
   }
 } 
+
+@media only screen and (max-width: 400px) {
+  .hamburger-wrapper {
+    margin-right: 2rem;
+  }
+}
