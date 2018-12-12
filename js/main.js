@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   // On load, initialize the first tab header and content to be shown. Rest are hidden/inactive.
-  const defaultTabHeader = document.getElementById('problem');
-  const defaultTab = document.getElementById('tab-content-problem');
+  const defaultTabHeader = document.getElementById('problem-lg');
+  const defaultTab = document.getElementById('tab-content-problem-lg');
   defaultTabHeader.className += ' selected';
   defaultTab.style.display = 'block';
 
