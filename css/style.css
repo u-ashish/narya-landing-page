@@ -1,0 +1,169 @@
+html, body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Roboto Slab', serif;
+}
+body {
+  background-color: #37517E;
+  color: white;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 1rem 0rem;
+  line-height: 1.15;
+}
+
+/* Header styling */
+
+.header {
+  font-size: 1.7rem;
+  padding: 3rem 4rem;
+  font-weight: 300;
+}
+
+.logo {
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 0.1rem solid grey;
+  float: left;
+}
+
+/* Main wrappers */
+
+.content-wrapper {
+  display: flex;
+  padding: 1.5rem 0rem 0rem 4rem;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.interest-wrapper {
+  max-width: 27.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.information-wrapper {
+  width: 63%;
+  border-radius: 10px 0 0 0;
+  box-shadow: 0 2px 50px 0 #000000;
+  min-height: 100%;
+}
+
+/* Interest wrapper (left side) styling */
+
+.main-text {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.sub-text {
+  font-size: 0.97rem;
+  font-weight: 100;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+}
+
+.signup-form {
+  /* margin-top: 11rem; */
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+form input {
+  flex-grow: 2;
+  border: none;
+  height: 2.5rem;
+  border-radius: 5px 0 0 5px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+input::placeholder {
+  color: #9B9B9B;
+}
+
+button {
+  background: #D8D8D8;
+  color: white;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  width: 4rem;
+  cursor: pointer;
+}
+
+.text-label {
+  font-size: 1rem;
+}
+
+.disclaimer-text {
+  font-size: 0.7rem;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
+}
+
+.additional-links {
+  margin-bottom: 1rem;
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+.additional-link {
+  letter-spacing: 0.05px;
+}
+
+.additional-link:nth-child(2) {
+  margin-left: 0.9rem;
+}
+
+/* Information wrapper (right side) styling */
+
+.tab-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tab-header {
+  width: 33.3333%;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  background-color: #2E4369;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.tab-header:first-of-type {
+  border-radius: 10px 0 0 0;
+}
+
+.tab-header.selected {
+  background-color: #37517E;
+  border-bottom: none;
+}
+
+.tab-content-wrapper {
+  padding: 2rem;
+  font-weight: 300;
+}
+
+
+/* CSS media queries for responsive styling */
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 20px;
+  }
+}
