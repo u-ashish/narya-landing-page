@@ -25,7 +25,7 @@ p {
 .logo {
   display: block;
   padding-bottom: 5px;
-  border-bottom: 0.1rem solid grey;
+  border-bottom: 0.1rem solid #FF593C;
   float: left;
 }
 
@@ -45,7 +45,7 @@ p {
   justify-content: space-between;
 }
 
-.information-wrapper {
+.information-wrapper-lg {
   width: 63%;
   border-radius: 10px 0 0 0;
   box-shadow: 0 2px 50px 0 #000000;
@@ -97,7 +97,8 @@ button {
   color: white;
   border: 0;
   border-radius: 0 5px 5px 0;
-  width: 4rem;
+  min-width: 3rem;
+  max-width: 3rem;
   cursor: pointer;
 }
 
@@ -159,11 +160,121 @@ button {
   font-weight: 300;
 }
 
+.information-wrapper-sm {
+  display: none;
+}
+
 
 /* CSS media queries for responsive styling */
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+} 
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+} 
 
 @media only screen and (min-width: 1440px) {
   html {
     font-size: 20px;
   }
 }
+
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+
+  .content-wrapper {
+    display: block;
+    padding: 1.5rem 0 0 0;
+  }
+
+  .interest-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .information-wrapper-lg {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: none;
+  }
+
+  .information-wrapper-sm {
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  .info-header-sm-wrapper {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background-color: #2E4369;
+    padding: 2rem 0.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .info-header-sm-wrapper > span {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #FF593C;
+  }
+
+
+  .information-wrapper-sm > div {
+    margin-bottom: 2rem;
+  }
+
+
+  .content-sm-wrapper {
+    background-color: #2E4369;
+    min-height: 20rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .signup-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .signup-form .text-label {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  form {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    width: 90%;
+  }
+
+  .disclaimer-text {
+    margin: 0 auto;
+    margin-top: 0.7rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  .additional-links {
+    margin-top: 1.7rem;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+} 
