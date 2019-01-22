@@ -1,10 +1,10 @@
 html, body {
   min-height: 100vh;
-  font-size: 16px;
-  font-family: 'Roboto Slab', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 body {
-  background-color: #37517E;
+  font-size: 16px;
+  background-color: #243238;
   color: white;
   overflow-x: hidden;
 }
@@ -27,7 +27,7 @@ p {
 .logo {
   display: block;
   padding-bottom: 5px;
-  border-bottom: 0.1rem solid #EF8354;
+  border-bottom: 0.1rem solid #F99D33;
   float: left;
 }
 
@@ -37,7 +37,7 @@ p {
   display: flex;
   padding: 1.5rem 0rem 0rem 4rem;
   justify-content: space-between;
-  min-height: 100vh;
+  min-height: 88vh;
 }
 
 .interest-wrapper {
@@ -68,10 +68,10 @@ p {
   font-weight: 100;
   line-height: 1.3;
   letter-spacing: 0.2px;
+  color: #dee0eb;
 }
 
 .signup-form {
-  /* margin-top: 11rem; */
   font-weight: 300;
 }
 
@@ -87,7 +87,6 @@ form input {
   border-radius: 5px 0 0 5px;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   font-size: 1rem;
-  font-family: 'Roboto Slab', serif;
 }
 
 input::placeholder {
@@ -113,6 +112,7 @@ button {
   font-weight: 100;
   letter-spacing: 0.2px;
   line-height: 1.3;
+  color: #dee0eb;
 }
 
 .additional-links {
@@ -143,7 +143,7 @@ button {
   font-size: 1.2rem;
   font-weight: 300;
   cursor: pointer;
-  background-color: #2D3142;
+  background-color: #2E3A3F;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
@@ -153,13 +153,13 @@ button {
 }
 
 .tab-header.selected {
-  background-color: #37517E;
+  background-color: #243238;
   border-bottom: none;
 }
 
 .tab-header.selected > span {
   padding-bottom: 5px;
-  border-bottom: 1px solid #EF8354;
+  border-bottom: 1px solid #F99D33;
 }
 
 .tab-content-wrapper {
@@ -167,12 +167,104 @@ button {
   font-weight: 300;
 }
 
+.tab-content-heading {
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.hero-number {
+  font-size: 1.8rem;
+  color: #0CA591;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+ol li {
+  counter-increment: my-counter;
+  margin-bottom: 1rem;
+}
+
+ol li::before {
+  color: #F99D33;
+  content: counter(my-counter) ". ";
+}
+
+.pricing-plans-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing-plans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.plan-info-wrapper {
+  background-color: #2E3A3F;
+  width: 32%;
+  height: 25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-title {
+  text-align: center;
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #0CA591;
+  margin-bottom: 1rem;
+}
+
+.content-label {
+  font-size: 1.1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hero-label {
+  font-size: 2.1rem;
+  font-weight: 400;
+}
+
+.tab-content-heading.text-center.hero-label {
+  margin-top: 3rem;
+}
+
+.tab-content-wrapper li {
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
 .information-wrapper-sm {
   display: none;
 }
 
+.no-bot-padding {
+  padding-bottom: 0rem !important;
+}
+
+.price-label {
+  font-size: 2rem;
+  text-align: center;
+  bottom: 0;
+}
+
+.description-wrapper {
+  background-color: #2E3A3F;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-bottom: 2rem;
+}
 
 /* CSS media queries for responsive styling */
+
 @media only screen and (min-width: 600px) {
   html {
     font-size: 14px;
@@ -181,15 +273,58 @@ button {
 
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .tab-header {
+    font-size: 1.4rem;
   }
 } 
+
+@media only screen and (min-width: 851px) {
+  html {
+    font-size: 13px;
+  }
+
+  .price-label {
+    font-size: 1.4rem;
+  }
+
+  .tab-header {
+    font-size: 1.05rem;
+  }
+} 
+
+@media only screen and (min-width: 900px) and (max-width: 1050px) {
+  .price-label {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+  .tab-header {
+    font-size: 1.05rem;
+  }
+
+  .content-label {
+    font-size: 1rem;
+  }
+} 
+
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 14.5px;
+  }
+}
 
 @media only screen and (min-width: 1440px) {
   html {
     font-size: 20px;
   }
 }
+
 
 @media only screen and (max-width: 850px) {
   html {
@@ -326,7 +461,7 @@ button {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #2D3142;
+    background-color: #2E3A3F;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -349,7 +484,7 @@ button {
   
   .hamburger-link.active {
     font-style: italic;
-    color: #EF8354;
+    color: #F99D33;
   }
   
   /* End Side Nav Styling for Mobile */
@@ -383,7 +518,7 @@ button {
     display: block;
     font-size: 1.5rem;
     font-weight: 300;
-    background-color: #2D3142;
+    background-color: #2E3A3F;
     padding: 2rem 0.5rem;
     width: 100%;
     text-align: center;
@@ -392,17 +527,15 @@ button {
 
   .info-header-sm-wrapper > span {
     padding-bottom: 5px;
-    border-bottom: 1px solid #EF8354;
+    border-bottom: 1px solid #F99D33;
   }
-
 
   .information-wrapper-sm > div {
     margin-bottom: 5rem;
   }
 
-
   .content-sm-wrapper {
-    min-height: 35rem;
+    padding: 2rem;
     font-size: 1.2rem;
     font-weight: 300;
     box-shadow: 2px 2px 60px 0 #000000;
@@ -430,6 +563,7 @@ button {
     margin-top: 0.7rem;
     width: 90%;
     text-align: center;
+    color: #dee0eb;
   }
 
   .additional-links {
@@ -437,6 +571,42 @@ button {
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 730px) {
+  .pricing-plans {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .plan-info-wrapper {
+    background-color: #2E3A3F;
+    min-height: 90%;
+    width: 100%;
+    height: 25rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    /* position: relative; */
+  }
+  .content-title {
+    text-align: center;
+    font-size: 2em;
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #0CA591;
+    margin-bottom: 1rem;
+  }
+
+  .content-label {
+    font-size: 1.1rem;
+  }
+} 
 
 @media only screen and (max-width: 650px) {
   .hamburger-wrapper {
