@@ -1,11 +1,9 @@
 html, body {
   min-height: 100vh;
-  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 body {
-  /* background-color: #1f364d; */
-  /* color: #4a4a4a; */
+  font-size: 16px;
   background-color: #243238;
   color: white;
   overflow-x: hidden;
@@ -39,7 +37,7 @@ p {
   display: flex;
   padding: 1.5rem 0rem 0rem 4rem;
   justify-content: space-between;
-  min-height: 100vh;
+  min-height: 88vh;
 }
 
 .interest-wrapper {
@@ -171,7 +169,7 @@ button {
 
 .tab-content-heading {
   font-size: 1.5rem;
-  padding-bottom: 1.6rem;
+  padding-bottom: 1.5rem;
 }
 
 .hero-number {
@@ -194,22 +192,25 @@ ol li::before {
   content: counter(my-counter) ". ";
 }
 
+.pricing-plans-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .pricing-plans {
   display: flex;
   flex-direction: row;
-  min-height: 100%;
   justify-content: space-between;
 }
 .plan-info-wrapper {
   background-color: #2E3A3F;
-  min-height: 90%;
   width: 32%;
   height: 25rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* position: relative; */
 }
 .content-title {
   text-align: center;
@@ -218,6 +219,23 @@ ol li::before {
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid #0CA591;
   margin-bottom: 1rem;
+}
+
+.content-label {
+  font-size: 1.1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hero-label {
+  font-size: 2.1rem;
+  font-weight: 400;
+}
+
+.tab-content-heading.text-center.hero-label {
+  margin-top: 3rem;
 }
 
 .tab-content-wrapper li {
@@ -237,38 +255,76 @@ ol li::before {
   font-size: 2rem;
   text-align: center;
   bottom: 0;
-  /* position: absolute; */
 }
 
 .description-wrapper {
   background-color: #2E3A3F;
   padding: 2rem 2rem 1rem 2rem;
+  margin-bottom: 2rem;
 }
 
 /* CSS media queries for responsive styling */
+
 @media only screen and (min-width: 600px) {
   html {
     font-size: 14px;
   }
 } 
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 992px) {
   html {
-    font-size: 12px;
+    font-size: 18px;
+  }
+  .tab-header {
+    font-size: 1.4rem;
   }
 } 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 851px) {
+  html {
+    font-size: 13px;
+  }
+
+  .price-label {
+    font-size: 1.4rem;
+  }
+
+  .tab-header {
+    font-size: 1.05rem;
+  }
+} 
+
+@media only screen and (min-width: 900px) and (max-width: 1050px) {
+  .price-label {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   html {
     font-size: 14px;
   }
+  .tab-header {
+    font-size: 1.05rem;
+  }
+
+  .content-label {
+    font-size: 1rem;
+  }
 } 
+
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 14.5px;
+  }
+}
 
 @media only screen and (min-width: 1440px) {
   html {
     font-size: 20px;
   }
 }
+
 
 @media only screen and (max-width: 850px) {
   html {
@@ -545,6 +601,10 @@ ol li::before {
     padding-bottom: 0.5rem;
     border-bottom: 0.1rem solid #0CA591;
     margin-bottom: 1rem;
+  }
+
+  .content-label {
+    font-size: 1.1rem;
   }
 } 
 
