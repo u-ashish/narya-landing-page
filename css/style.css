@@ -18,7 +18,7 @@ p {
 
 .header {
   font-size: 1.7rem;
-  padding: 2rem 4rem 2rem 4rem;
+  padding: 1.7rem 4rem 1.7rem 4rem;
   font-weight: 300;
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,7 @@ p {
   padding-bottom: 5px;
   border-bottom: 0.1rem solid #F99D33;
   float: left;
+  font-size: 2rem;
 }
 
 /* Main wrappers */
@@ -48,10 +49,11 @@ p {
 }
 
 .information-wrapper-lg {
-  width: 63%;
+  width: 66%;
   border-radius: 10px 0 0 0;
   box-shadow: 0 2px 50px 0 #000000;
   min-height: 100%;
+  margin-top: -6rem;
 }
 
 /* Interest wrapper (left side) styling */
@@ -73,6 +75,7 @@ p {
 
 .signup-form {
   font-weight: 300;
+  margin-top: -6rem;
 }
 
 form {
@@ -104,7 +107,7 @@ button {
 }
 
 .text-label {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .disclaimer-text {
@@ -137,7 +140,7 @@ button {
 }
 
 .tab-header {
-  width: 33.3333%;
+  width: 50%;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 1.2rem;
@@ -172,9 +175,33 @@ button {
   padding-bottom: 1.5rem;
 }
 
+.number-display-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number-display-box {
+  width: 32.3%;
+  background-color: #2E3A3F;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
 .hero-number {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: #0CA591;
+}
+
+.emphasized-text {
+  font-size: 2rem;
+  color: #0CA591;
+}
+
+.hero-caption {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 0.4rem;
 }
 
 ol {
@@ -298,6 +325,17 @@ ol li::before {
   .price-label {
     font-size: 1.3rem;
   }
+
+  .hero-number {
+    font-size: 1.5rem;
+    color: #0CA591;
+  }
+  
+  .hero-caption {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -317,7 +355,115 @@ ol li::before {
   html {
     font-size: 14.5px;
   }
+
+  .hero-number {
+    font-size: 2.2rem;
+    color: #0CA591;
+  }
+  
+  .hero-caption {
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
 }
+
+@media all and (min-width: 600px)  {  
+  .hero-number {
+    font-size: 1.5rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.3rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 700px)  {  
+  .hero-number {
+    font-size: 1.5rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.3rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 800px)  {  
+  .hero-number {
+    font-size: 1.5rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 925px)  {  
+  .hero-number {
+    font-size: 1.5rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 1025px)  {  
+  .hero-number {
+    font-size: 1.6rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 1125px)  {  
+  .hero-number {
+    font-size: 2.0rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.3rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 1225px)  {  
+  .hero-number {
+    font-size: 2.2rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media all and (min-width: 1300px)  {  
+  .hero-number {
+    font-size: 1.8rem;
+    color: #0CA591;
+  } 
+  .hero-caption {
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
 
 @media only screen and (min-width: 1440px) {
   html {
@@ -504,6 +650,7 @@ ol li::before {
   .information-wrapper-lg {
     width: 100%;
     max-width: 100%;
+    /* margin-top: -6rem; */
     margin-left: 4rem;
     margin-right: 4rem;
     display: none;
@@ -548,7 +695,7 @@ ol li::before {
   }
 
   .signup-form .text-label {
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -618,6 +765,34 @@ ol li::before {
   html {
     font-size: 10px;
   }
+
+  .number-display-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .number-display-box {
+    width: 100%;
+    background-color: #2E3A3F;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-number {
+    font-size: 2.7rem;
+    color: #0CA591;
+  }
+  
+  .hero-caption {
+    font-size: 2rem;
+    display: block;
+    margin-top: 0.4rem;
+  }
+  
+
 } 
 
 @media only screen and (max-width: 400px) {
