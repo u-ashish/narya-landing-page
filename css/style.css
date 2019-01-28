@@ -195,7 +195,7 @@ button {
 
 .emphasized-text {
   font-size: 2rem;
-  color: #0CA591;
+  color: rgb(14, 192, 168);
 }
 
 .hero-caption {
@@ -288,6 +288,37 @@ ol li::before {
   background-color: #2E3A3F;
   padding: 2rem 2rem 1rem 2rem;
   margin-bottom: 2rem;
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: white;
+}
+
+a:link {
+  color: white; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.superscript {
+  font-size: .80rem;
+  line-height: 0.5rem;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
 }
 
 /* CSS media queries for responsive styling */
